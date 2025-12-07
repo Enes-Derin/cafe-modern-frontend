@@ -1,0 +1,93 @@
+/* ---- Premium Dark Gallery ---- */
+
+body {
+    background: linear-gradient(135deg, #1e1b18, #2d2423) !important;
+    color: #e8e0d9;
+}
+
+/* Grid cards */
+.gallery-card {
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+    /* Cam efekti */
+    background: rgba(45, 35, 32, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(255, 215, 180, 0.12);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(212, 176, 137, 0.07);
+    /* gold glow */
+}
+
+.gallery-card:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(212, 176, 137, 0.15);
+    /* güçlü glow */
+}
+
+/* Images fully responsive */
+.gallery-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+
+    /* Smooth fade */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.06);
+    opacity: 0.95;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 7, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.lightbox-img {
+    max-width: 92%;
+    max-height: 85vh;
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 215, 180, 0.18);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(212, 176, 137, 0.2);
+    /* gold halo */
+
+    transition: transform 0.25s ease;
+}
+
+.lightbox-img:hover {
+    transform: scale(1.02);
+}
+
+/* Mobile tweaks */
+@media (max-width: 576px) {
+    .gallery-img {
+        height: 200px;
+    }
+
+    .lightbox-img {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+}

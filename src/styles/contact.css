@@ -1,0 +1,76 @@
+/* Genel Arkaplan Uyumu */
+body {
+    background: linear-gradient(135deg, #1e1b18, #2d2423);
+    color: #e8e0d9;
+}
+
+/* Cam Efekti Kart */
+.glass-card-dark {
+    background: rgba(45, 35, 32, 0.55);
+    border: 1px solid rgba(255, 215, 180, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+}
+
+.glass-card-dark:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Info Satırları */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: #f0e6dd;
+    padding: 6px 0;
+}
+
+.info-icon {
+    font-size: 1.3rem;
+    color: #d4b089;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Divider */
+.divider-line {
+    border-color: rgba(211, 174, 140, 0.25);
+}
+
+/* MAP Container */
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 215, 180, 0.15);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(212, 176, 137, 0.15);
+    /* Gold glow */
+}
+
+/* Hover efekt (PC için) */
+.map-wrapper:hover {
+    transform: scale(1.01);
+    transition: 0.25s ease;
+}
+
+/* Tablette düzen */
+@media (max-width: 992px) {
+    .glass-card-dark {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Telefonda düzen */
+@media (max-width: 576px) {
+    .info-item {
+        font-size: 0.95rem;
+    }
+
+    .info-icon {
+        font-size: 1.15rem;
+    }
+}

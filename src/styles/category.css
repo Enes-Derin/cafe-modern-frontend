@@ -1,0 +1,163 @@
+/* ==== CATEGORY EDITOR DARK PREMIUM ==== */
+
+.cat-wrapper {
+    padding: 20px;
+    color: #e8e8e8;
+}
+
+/* Header */
+.cat-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cat-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f0e6d2;
+}
+
+/* Add category area */
+.cat-add {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+}
+
+/* Floating input style */
+.input-wrapper {
+    position: relative;
+    width: 220px;
+}
+
+.input-wrapper input[type="text"],
+.input-wrapper input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.07);
+    color: #fff;
+}
+
+.input-wrapper label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+.input-wrapper input:focus+label,
+.input-wrapper input:not(:placeholder-shown)+label {
+    top: -8px;
+    font-size: 13px;
+    background: #1a1a1a;
+    padding: 0 6px;
+    border-radius: 6px;
+}
+
+/* Butonlar */
+.cat-add button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7a2d2d, #a63a3a);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.cat-add button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+/* ==== CATEGORY LIST ==== */
+
+.cat-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.cat-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px;
+    border-radius: 14px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    transition: 0.25s ease;
+    color: #fff;
+}
+
+.cat-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Category image */
+.cat-item-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    background: #111;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.cat-item span {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Buttons */
+.cat-item-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cat-item-buttons button {
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.cat-item-buttons button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Edit Mode Inputs */
+.cat-item input[type="text"],
+.cat-item input[type="file"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    color: #fff;
+}
