@@ -7,7 +7,7 @@ import {
 } from "../../redux/slice/gallerySlice";
 import "../../styles/galleryEditor.css";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export default function GalleryEditor() {
     const dispatch = useDispatch();

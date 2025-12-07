@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "../styles/gallery.css";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export default function Gallery() {
     const dispatch = useDispatch();

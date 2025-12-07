@@ -5,7 +5,7 @@ import { fetchMenuItemsByCategory } from "../redux/slice/menuItemSlice";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/menu.css";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+const BASE_URL = import.meta.env.VITE_API_URL
 
 function Menu() {
     const dispatch = useDispatch();
