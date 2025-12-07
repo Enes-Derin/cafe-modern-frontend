@@ -1,65 +1,47 @@
 import React, { useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
-import {
-    Menu,
-    X,
-    LayoutGrid,
-    Images,
-    UtensilsCrossed,
-} from "lucide-react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "../../styles/dashboard.css";
-
 export default function Dashboard() {
+    const [firstLoad, setFirstLoad] = useState(true);
     const location = useLocation();
-    const [open, setOpen] = useState(true);
+    const navigate = useNavigate();
+    const handleEnter = (route) => { setFirstLoad(false); setTimeout(() => navigate(route), 400); };
+    // İlk ekran
+    if (firstLoad) {
+        return (
+            <div className="dashboard-fullscreen centered-screen">
+                <h1 className="dashboard-title">Yönetim Paneli</h1>
 
-    const navItems = [
-        { to: "/admin/categories", label: "Kategoriler", icon: <LayoutGrid size={18} /> },
-        { to: "/admin/menu", label: "Menü", icon: <UtensilsCrossed size={18} /> },
-        { to: "/admin/gallery", label: "Galeri", icon: <Images size={18} /> },
-    ];
-
-    return (
-        <div className="admin-layout">
-
-            {/* SIDEBAR */}
-            <aside className={`sidebar ${open ? "open" : "closed"}`}>
-                <div className="sidebar-header">
-                    <h1 className="logo">{open ? "Admin Panel" : "AP"}</h1>
-                    <button className="toggle-btn" onClick={() => setOpen(!open)}>
-                        {open ? <X size={20} /> : <Menu size={20} />}
-                    </button>
+                <div className="dashboard-cards centered-cards">
+                    <div className="dash-card" onClick={() => handleEnter("/admin/categories")}>
+                        <h2>Kategoriler</h2>
+                    </div>
+                    <div className="dash-card" onClick={() => handleEnter("/admin/menu")}>
+                        <h2>Menü</h2>
+                    </div>
+                    <div className="dash-card" onClick={() => handleEnter("/admin/gallery")}>
+                        <h2>Galeri</h2>
+                    </div>
                 </div>
-
-                <nav className="sidebar-menu">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.to}
-                            to={item.to}
-                            className={
-                                location.pathname.includes(item.to.split("/")[2])
-                                    ? "menu-item active"
-                                    : "menu-item"
-                            }
-                        >
-                            {item.icon}
-                            {open && <span>{item.label}</span>}
-                        </Link>
-                    ))}
-                </nav>
-            </aside>
-
-            {/* MAIN AREA */}
-            <div className="main">
-                <header className="topbar">
-                    <p className="welcome">Hoş geldin 👋 Enes</p>
-                </header>
-
-                <main className="content">
-                    <Outlet />
-                </main>
             </div>
-
+        );
+    }
+    // Normal Dashboard
+    return (
+        <div className="dashboard-root"> {
+            /* ÜST NAVBAR */
+        }
+            <nav className="dashboard-navbar">
+                <h2 className="navbar-logo">Admin Panel</h2>
+                <div className="navbar-links">
+                    <Link to="/admin/categories" className={location.pathname.includes("categories") ? "active" : ""} > Kategoriler </Link>
+                    <Link to="/admin/menu" className={location.pathname.includes("menu") ? "active" : ""} > Menü </Link>
+                    <Link to="/admin/gallery" className={location.pathname.includes("gallery") ? "active" : ""} > Galeri </Link>
+                </div>
+            </nav>
+            <main className="dashboard-content">
+                <Outlet />
+            </main>
         </div>
     );
 }
