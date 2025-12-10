@@ -50,7 +50,7 @@ export default function Gallery() {
                     >
                         <div
                             className="gallery-card"
-                            onClick={() => setSelectedImage(`${BASE_URL}${img.imageUrl}`)}
+                            onClick={() => setSelectedImage(`${img.imageUrl}`)}
                         >
                             <img
                                 src={`${img.imageUrl}`}

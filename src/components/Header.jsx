@@ -45,10 +45,10 @@ function Navbar() {
                     <ul className="navbar-nav ms-auto gap-2">
 
                         {[
-                            { to: "/", label: "Home" },
-                            { to: "/menu", label: "Menu" },
-                            { to: "/gallery", label: "Gallery" },
-                            { to: "/contact", label: "Contact" },
+                            { to: "/", label: "Anasayfa" },
+                            { to: "/menu", label: "Menü" },
+                            { to: "/gallery", label: "Galeri" },
+                            { to: "/contact", label: "İletişim" },
                         ].map((item) => (
                             <li key={item.to} className="nav-item">
                                 <Link
