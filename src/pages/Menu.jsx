@@ -90,7 +90,7 @@ function Menu() {
                                         }}
                                     >
                                         <img
-                                            src={`${BASE_URL}${cat.imageUrl}`}
+                                            src={`${cat.imageUrl}`}
                                             alt={cat.name}
                                             style={{
                                                 width: "100%",
@@ -152,7 +152,7 @@ function Menu() {
                                             }}
                                         >
                                             <img
-                                                src={`${BASE_URL}${item.imageUrl}`}
+                                                src={`${item.imageUrl}`}
                                                 alt={item.name}
                                                 style={{
                                                     width: "100%",

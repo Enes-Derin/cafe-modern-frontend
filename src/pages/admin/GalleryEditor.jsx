@@ -48,7 +48,7 @@ export default function GalleryEditor() {
                 {items.map((img) => (
                     <div key={img.id} className="gallery-card">
                         <div className="gallery-img-wrapper">
-                            <img src={`${BASE_URL}${img.imageUrl}`} alt={`Gallery ${img.id}`} />
+                            <img src={`${img.imageUrl}`} alt={`Gallery ${img.id}`} />
                         </div>
                         <button
                             className="gallery-delete-btn"

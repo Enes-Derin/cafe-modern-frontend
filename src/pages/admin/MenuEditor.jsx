@@ -143,7 +143,7 @@ export default function MenuEditor() {
 
                         {item.imageUrl && (
                             <div className="menu-img">
-                                <img src={`${BASE_URL}${item.imageUrl}`} alt={item.name} />
+                                <img src={`${item.imageUrl}`} alt={item.name} />
                             </div>
                         )}
 
