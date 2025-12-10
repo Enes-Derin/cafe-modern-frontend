@@ -111,7 +111,7 @@ export default function CategoryEditor() {
                                 {/* NORMAL MODE */}
                                 {cat.imageUrl && (
                                     <img
-                                        src={`${BASE_URL}${cat.imageUrl}`}
+                                        src={`${cat.imageUrl}`}
                                         alt={cat.name}
                                         className="cat-item-img"
                                     />
