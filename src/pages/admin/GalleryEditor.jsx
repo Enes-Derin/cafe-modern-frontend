@@ -21,9 +21,10 @@ export default function GalleryEditor() {
 
     const handleUpload = () => {
         if (!files.length) return;
-        files.forEach((file) => {
-            dispatch(uploadGalleryImage(file));
-        });
+
+        const uploads = files.map(file => dispatch(uploadGalleryImage(file)));
+        Promise.all(uploads);
+
         setFiles([]);
     };
 

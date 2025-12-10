@@ -27,7 +27,7 @@ export const uploadGalleryImage = createAsyncThunk(
             });
             return res.data.payload;
         } catch (err) {
-            return thunkAPI.rejectWithValue(err.response.data);
+            return res.data.error;
         }
     }
 );
@@ -38,7 +38,7 @@ export const deleteGalleryImage = createAsyncThunk(
     async (id, thunkAPI) => {
         try {
             const res = await axiosInstance.delete(`/admin/gallery/${id}`);
-            return res.data.payload; // backend'den dönen id
+            return res.data.payload;
         } catch (err) {
             return thunkAPI.rejectWithValue(err.response.data);
         }
