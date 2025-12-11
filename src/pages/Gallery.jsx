@@ -21,7 +21,6 @@ export default function Gallery() {
     return (
         <div className="container py-4">
 
-            {/* TITLE */}
             <motion.h1
                 className="fw-bold text-center my-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -38,7 +37,6 @@ export default function Gallery() {
 
             {loading && <p className="text-center text-light">Yükleniyor...</p>}
 
-            {/* IMAGE GRID */}
             <div className="row g-4">
                 {gallery.map((img) => (
                     <motion.div

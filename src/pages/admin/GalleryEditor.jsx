@@ -30,7 +30,7 @@ export default function GalleryEditor() {
 
     return (
         <div className="gallery-editor-wrapper">
-            <h2 className="gallery-editor-title">📷 Gallery Editor</h2>
+            <h2 className="gallery-editor-title">Galeri Yönetimi</h2>
 
             {/* Upload Section */}
             <div className="gallery-upload">
@@ -39,7 +39,7 @@ export default function GalleryEditor() {
                     multiple
                     onChange={(e) => setFiles(Array.from(e.target.files))}
                 />
-                <button onClick={handleUpload}>Upload</button>
+                <button onClick={handleUpload}>Yükle</button>
             </div>
 
             {loading && <p>Loading...</p>}
@@ -55,7 +55,7 @@ export default function GalleryEditor() {
                             className="gallery-delete-btn"
                             onClick={() => dispatch(deleteGalleryImage(img.id))}
                         >
-                            Delete
+                            Sil
                         </button>
                     </div>
                 ))}

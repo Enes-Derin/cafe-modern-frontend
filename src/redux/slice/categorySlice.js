@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/axiosInstance";
 
-// Fetch all categories
+
 export const fetchCategories = createAsyncThunk(
     "category/fetchCategories",
     async (_, thunkAPI) => {
@@ -36,7 +36,6 @@ export const updateCategory = createAsyncThunk(
         }
     }
 );
-// Delete category
 export const deleteCategory = createAsyncThunk(
     "category/deleteCategory",
     async (id, thunkAPI) => {

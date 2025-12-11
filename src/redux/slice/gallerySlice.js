@@ -1,7 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/axiosInstance";
-
-// Fetch all gallery images
 export const fetchGallery = createAsyncThunk(
     "gallery/fetchGallery",
     async (_, thunkAPI) => {
@@ -14,10 +12,9 @@ export const fetchGallery = createAsyncThunk(
     }
 );
 
-// Upload image
 export const uploadGalleryImage = createAsyncThunk(
     "gallery/uploadGalleryImage",
-    async (file, thunkAPI) => {
+    async (file) => {
         try {
             const formData = new FormData();
             formData.append("file", file);
@@ -32,7 +29,6 @@ export const uploadGalleryImage = createAsyncThunk(
     }
 );
 
-// Delete image
 export const deleteGalleryImage = createAsyncThunk(
     "gallery/deleteGalleryImage",
     async (id, thunkAPI) => {

@@ -12,8 +12,6 @@ export default function Home() {
             }}
         > <div className="row w-100 align-items-center">
 
-
-                {/* LEFT CONTENT */}
                 <motion.div
                     className="col-12 col-lg-6 mb-5 mb-lg-0"
                     initial={{ opacity: 0, x: -40 }}
@@ -39,7 +37,6 @@ export default function Home() {
                         Sizin için özenle hazırlanmış kahveler ve atıştırmalıklar.
                     </motion.p>
 
-                    {/* BUTTONS */}
                     <motion.div
                         className="mt-4 d-flex gap-3 flex-wrap"
                         initial={{ opacity: 0 }}
@@ -77,7 +74,6 @@ export default function Home() {
                         </motion.div>
                     </motion.div>
 
-                    {/* INFO GRID */}
                     <motion.div
                         className="row text-center mt-5 g-3"
                         initial="hidden"
@@ -110,7 +106,6 @@ export default function Home() {
                     </motion.div>
                 </motion.div>
 
-                {/* RIGHT IMAGE */}
                 <motion.div
                     className="col-12 col-lg-6"
                     initial={{ opacity: 0, x: 40 }}

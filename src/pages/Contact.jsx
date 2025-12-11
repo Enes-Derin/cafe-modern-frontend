@@ -6,7 +6,6 @@ export default function Contact() {
     return (
         <div className="container py-5">
 
-            {/* HEADER */}
             <motion.h1
                 className="fw-bold text-center mb-5"
                 initial={{ opacity: 0, y: 20 }}
@@ -23,7 +22,6 @@ export default function Contact() {
 
             <div className="row g-4 align-items-stretch">
 
-                {/* LEFT CARD (INFO) */}
                 <motion.div
                     className="col-md-5"
                     initial={{ opacity: 0, x: -40 }}
@@ -55,7 +53,6 @@ export default function Contact() {
                     </div>
                 </motion.div>
 
-                {/* RIGHT MAP CARD */}
                 <motion.div
                     className="col-md-7"
                     initial={{ opacity: 0, x: 40 }}

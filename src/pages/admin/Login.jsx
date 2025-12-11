@@ -16,24 +16,20 @@ export default function Login() {
         setLoading(true);
         setError(null);
 
-        // 1) Eski tokenları temizle
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         localStorage.removeItem("role");
 
         try {
-            // 2) Giriş isteği at
             const res = await axiosInstance.post("/auth/login", {
                 username,
                 password,
             });
 
-            // 3) Yeni tokenları kaydet
             localStorage.setItem("accessToken", res.data.payload.accessToken);
             localStorage.setItem("refreshToken", res.data.payload.refreshToken);
             localStorage.setItem("role", res.data.payload.role);
 
-            // 4) Admin paneline yönlendir
             navigate("/admin");
         } catch (err) {
             setError(err.response?.data?.message || "Giriş başarısız");

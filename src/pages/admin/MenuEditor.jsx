@@ -84,9 +84,8 @@ export default function MenuEditor() {
     return (
         <div className="menu-page">
 
-            <h2 className="menu-title">🍽 Menü Yönetimi</h2>
+            <h2 className="menu-title">Menü Yönetimi</h2>
 
-            {/* CATEGORY SELECT */}
             <div className="menu-row">
                 <select
                     className="menu-select"
@@ -102,7 +101,6 @@ export default function MenuEditor() {
                 </select>
             </div>
 
-            {/* FORM */}
             <div className="menu-form">
                 <input type="file" onChange={(e) => setFile(e.target.files[0])} />
 
@@ -136,7 +134,6 @@ export default function MenuEditor() {
                 )}
             </div>
 
-            {/* ITEMS */}
             <div className="menu-grid">
                 {menuItems.map((item) => (
                     <div key={item.id} className="menu-card">

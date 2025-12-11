@@ -29,7 +29,6 @@ export default function Dashboard() {
     // Normal Dashboard
     return (
         <div className="dashboard-root"> {
-            /* ÜST NAVBAR */
         }
             <nav className="dashboard-navbar">
                 <h2 className="navbar-logo">Admin Panel</h2>

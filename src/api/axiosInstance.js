@@ -18,7 +18,6 @@ axiosInstance.interceptors.request.use(
     (error) => Promise.reject(error)
 );
 
-// --- 401 gelirse refresh dene ---
 axiosInstance.interceptors.response.use(
     (response) => response,
     async (error) => {

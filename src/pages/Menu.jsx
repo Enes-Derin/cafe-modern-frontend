@@ -29,7 +29,6 @@ function Menu() {
         }
     }, [selectedCategory, dispatch]);
 
-    /* ---- Animations ---- */
     const fadeUp = {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },
@@ -47,7 +46,6 @@ function Menu() {
     return (
         <div className="container py-5">
 
-            {/* PAGE TITLE */}
             <motion.h1
                 className="text-center mb-5 fw-bold"
                 {...fadeUp}
@@ -56,7 +54,6 @@ function Menu() {
                 Menü
             </motion.h1>
 
-            {/* ---- CATEGORY LIST ---- */}
             {!selectedCategory && !loadingCategories && (
                 <motion.div
                     className="row g-4 justify-content-center"
@@ -108,7 +105,6 @@ function Menu() {
                 </motion.div>
             )}
 
-            {/* ---- BACK BUTTON ----- */}
             {selectedCategory && (
                 <motion.button
                     className="btn btn-outline-secondary mb-4 btn-pulse"
@@ -120,7 +116,6 @@ function Menu() {
                 </motion.button>
             )}
 
-            {/* ---- MENU ITEMS ---- */}
             <AnimatePresence>
                 {selectedCategory && !loadingMenuItems && (
                     <motion.div

@@ -25,10 +25,8 @@ export default function App() {
         flexDirection: "column",
       }}
     >
-      {/* HEADER */}
       <Header />
 
-      {/* MAIN CONTENT */}
       <main
         style={{
           flex: 1,
@@ -43,7 +41,6 @@ export default function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* ADMIN */}
           <Route
             path="/admin"
             element={
@@ -61,7 +58,6 @@ export default function App() {
         </Routes>
       </main>
 
-      {/* FOOTER (Responsive & Modern) */}
       <footer
         style={{
           textAlign: "center",

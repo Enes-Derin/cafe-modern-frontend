@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/axiosInstance";
 
-// Fetch menu items by category
 export const fetchMenuItemsByCategory = createAsyncThunk(
     "menuItem/fetchByCategory",
     async (categoryId, thunkAPI) => {
@@ -14,7 +13,6 @@ export const fetchMenuItemsByCategory = createAsyncThunk(
     }
 );
 
-// Upload new menu item
 export const addMenuItem = createAsyncThunk(
     "menuItem/addMenuItem",
     async ({ file, name, description, price, categoryId }, thunkAPI) => {
@@ -36,7 +34,6 @@ export const addMenuItem = createAsyncThunk(
     }
 );
 
-// Update menu item
 export const updateMenuItem = createAsyncThunk(
     "menuItem/updateMenuItem",
     async ({ id, file, name, description, price, categoryId }, thunkAPI) => {
@@ -58,7 +55,6 @@ export const updateMenuItem = createAsyncThunk(
     }
 );
 
-// Delete menu item
 export const deleteMenuItem = createAsyncThunk(
     "menuItem/deleteMenuItem",
     async (id, thunkAPI) => {

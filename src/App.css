@@ -5,7 +5,6 @@ html {
   color: #eaeaea !important;
 }
 
-/* Bootstrap boşlukları / container arka planları */
 .container,
 .container-fluid,
 .row,
@@ -17,7 +16,6 @@ footer {
   background: transparent !important;
 }
 
-/* Bootstrap kartları */
 .card,
 .card-body,
 .card-header,
@@ -27,7 +25,6 @@ footer {
   color: #eaeaea !important;
 }
 
-/* Input ve Form elemanları */
 input,
 textarea,
 select {
@@ -41,7 +38,6 @@ textarea::placeholder {
   color: #bbb !important;
 }
 
-/* Tablo */
 table {
   background: rgba(255, 255, 255, 0.05) !important;
   color: #fff !important;
@@ -53,32 +49,27 @@ table th {
   border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-/* Bootstrap alert */
 .alert {
   background: rgba(255, 255, 255, 0.1) !important;
   color: #fff !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Modal */
 .modal-content {
   background: #1a1a1a !important;
   color: #fff !important;
 }
 
-/* White flashes on image loading */
 img {
   background: #0a0a0a !important;
 }
 
-/* Bootstrap form-control beyaz kenarlıkları yok et */
 .form-control {
   background-color: rgba(255, 255, 255, 0.08) !important;
   border-color: rgba(255, 255, 255, 0.2) !important;
   color: #fff !important;
 }
 
-/* Select option dark */
 select option {
   background: #131318 !important;
   color: #fff !important;

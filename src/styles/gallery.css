@@ -1,18 +1,14 @@
-/* ---- Premium Dark Gallery ---- */
-
 body {
     background: linear-gradient(135deg, #1e1b18, #2d2423) !important;
     color: #e8e0d9;
 }
 
-/* Grid cards */
 .gallery-card {
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
 
-    /* Cam efekti */
     background: rgba(45, 35, 32, 0.55);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -22,7 +18,6 @@ body {
     box-shadow:
         0 6px 18px rgba(0, 0, 0, 0.35),
         0 0 20px rgba(212, 176, 137, 0.07);
-    /* gold glow */
 }
 
 .gallery-card:hover {
@@ -30,10 +25,8 @@ body {
     box-shadow:
         0 10px 22px rgba(0, 0, 0, 0.4),
         0 0 25px rgba(212, 176, 137, 0.15);
-    /* güçlü glow */
 }
 
-/* Images fully responsive */
 .gallery-img {
     width: 100%;
     height: 260px;
@@ -41,7 +34,6 @@ body {
     background-color: #1a1a1a;
     border-radius: 12px;
 
-    /* Smooth fade */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -50,7 +42,6 @@ body {
     opacity: 0.95;
 }
 
-/* Lightbox */
 .lightbox {
     position: fixed;
     inset: 0;
@@ -80,7 +71,6 @@ body {
     transform: scale(1.02);
 }
 
-/* Mobile tweaks */
 @media (max-width: 576px) {
     .gallery-img {
         height: 200px;

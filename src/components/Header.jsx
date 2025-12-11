@@ -16,7 +16,6 @@ function Navbar() {
         >
             <div className="container">
 
-                {/* Logo */}
                 <Link
                     className="navbar-brand fw-bold"
                     to="/"
@@ -25,7 +24,6 @@ function Navbar() {
                     Café Modern
                 </Link>
 
-                {/* Hamburger */}
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -33,14 +31,12 @@ function Navbar() {
                     data-bs-target="#mainNavbar"
                     style={{ border: "none" }}
                 >
-                    {/* Görünür beyaz ikon */}
                     <span
                         className="navbar-toggler-icon"
                         style={{ filter: "invert(1)" }}
                     ></span>
                 </button>
 
-                {/* Links */}
                 <div className="collapse navbar-collapse" id="mainNavbar">
                     <ul className="navbar-nav ms-auto gap-2">
 
