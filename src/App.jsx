@@ -1,17 +1,78 @@
+// import React from "react";
+// import { Routes, Route } from "react-router-dom";
+
+// import Header from "./components/Header";
+// import Home from "./pages/Home";
+// import Menu from "./pages/Menu";
+// import Contact from "./pages/Contact";
+// import Gallery from "./pages/Gallery";
+
+// import "./styles/global.css";
+
+// export default function App() {
+//   return (
+//     <div className="app-wrapper">
+//       <Header />
+
+//       <main className="main-content">
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/menu" element={<Menu />} />
+//           <Route path="/gallery" element={<Gallery />} />
+//           <Route path="/contact" element={<Contact />} />
+//         </Routes>
+//       </main>
+
+//       <footer className="cafe-footer">
+//         <div className="footer-content">
+//           <div className="footer-brand">
+//             <h3>Café Noir</h3>
+//             <p>İstanbul'un kalbinde, 1987'den beri</p>
+//           </div>
+
+//           <div className="footer-info">
+//             <div className="footer-section">
+//               <h4>İletişim</h4>
+//               <p>📍 Asmalı Mescit Mahallesi</p>
+//               <p>Beyoğlu, İstanbul</p>
+//               <p>📞 0212 245 67 89</p>
+//             </div>
+
+//             <div className="footer-section">
+//               <h4>Çalışma Saatleri</h4>
+//               <p>Pazartesi - Cuma: 08:00 - 23:00</p>
+//               <p>Cumartesi: 09:00 - 00:00</p>
+//               <p>Pazar: 10:00 - 22:00</p>
+//             </div>
+
+//             <div className="footer-section">
+//               <h4>Bizi Takip Edin</h4>
+//               <div className="social-links">
+//                 <a href="#">@cafenoir</a>
+//                 <a href="#">Facebook</a>
+//                 <a href="#">Twitter</a>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="footer-bottom">
+//           © {new Date().getFullYear()} Café Noir. Tüm hakları saklıdır.
+//         </div>
+//       </footer>
+//     </div>
+//   );
+// }
+
+
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
-
-import ProtectedRoute from "./pages/admin/ProtectedRoute";
-import Dashboard from "./pages/admin/Dashboard";
-import CategoryEditor from "./pages/admin/CategoryEditor";
-import MenuEditor from "./pages/admin/MenuEditor";
-import GalleryEditor from "./pages/admin/GalleryEditor";
 import Login from "./pages/admin/Login";
 
 export default function App() {
@@ -30,7 +91,7 @@ export default function App() {
       <main
         style={{
           flex: 1,
-          paddingTop: "20px",
+          paddingTop: "80px",
           paddingLeft: "12px",
           paddingRight: "12px",
         }}
@@ -40,37 +101,26 @@ export default function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-
-          <Route
-            path="/admin"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          >
-            <Route path="categories" element={<CategoryEditor />} />
-            <Route path="menu" element={<MenuEditor />} />
-            <Route path="gallery" element={<GalleryEditor />} />
-          </Route>
-
-          <Route path="/admin/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </main>
 
       <footer
         style={{
           textAlign: "center",
-          padding: "16px 0",
-          marginTop: "40px",
-          background: "rgba(35, 30, 28, 0.55)",
-          backdropFilter: "blur(6px)",
-          borderTop: "1px solid rgba(255, 215, 180, 0.12)",
+          padding: "24px 0",
+          marginTop: "60px",
+          background: "rgba(35, 30, 28, 0.65)",
+          backdropFilter: "blur(8px)",
+          borderTop: "1px solid rgba(255, 215, 180, 0.15)",
           color: "#cbb8a1",
-          fontSize: "0.9rem",
+          fontSize: "0.95rem",
         }}
       >
-        © {new Date().getFullYear()} Café Modern — Beyoğlu
+        <div className="container">
+          <p className="mb-2">© {new Date().getFullYear()} Café Modern — Beyoğlu, İstanbul</p>
+          <p className="small mb-0 opacity-75">Her yudumda tazelik, her lokmada lezzet...</p>
+        </div>
       </footer>
     </div>
   );
