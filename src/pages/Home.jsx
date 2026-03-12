@@ -8,10 +8,10 @@ const stats = [
 ];
 
 const features = [
-    { icon: "🍳", title: "Kahvaltı Çeşitleri", desc: "Serpme kahvaltıdan omlete, her sabah taze ve dolu dolu bir başlangıç" },
-    { icon: "🍛", title: "Dünya Mutfağı", desc: "Farklı kültürlerden ilham alan zengin ve lezzetli dünya mutfağı tabakları" },
-    { icon: "🍸", title: "Kokteyller & İçecekler", desc: "Alkollü ve alkolsüz özel kokteyl çeşitleri, kahve ve soğuk içecekler" },
-    { icon: "💨", title: "Nargile & Maç", desc: "Kaliteli nargile çeşitleri ve canlı maç yayını keyfi bir arada" },
+    { icon: "", title: "Kahvaltı Çeşitleri", desc: "Serpme kahvaltıdan omlete, her sabah taze ve dolu dolu bir başlangıç" },
+    { icon: "", title: "Dünya Mutfağı", desc: "Farklı kültürlerden ilham alan zengin ve lezzetli dünya mutfağı tabakları" },
+    { icon: "", title: "Kokteyller & İçecekler", desc: "Alkollü ve alkolsüz özel kokteyl çeşitleri, kahve ve soğuk içecekler" },
+    { icon: "", title: "Nargile & Maç", desc: "Kaliteli nargile çeşitleri ve canlı maç yayını keyfi bir arada" },
 ];
 
 const testimonials = [
@@ -20,7 +20,7 @@ const testimonials = [
     { name: "Volkan A.", role: "Müşteri", text: "Dünya mutfağından seçenekler harika. Fiyat performans çok iyi, tavsiye ederim.", avatar: "V" },
 ];
 
-const tags = ["🍳 Kahvaltı", "🍛 Dünya Mutfağı", "🍸 Kokteyller", "💨 Nargile", "⚽ Maç Yayını", "🎶 Sıra Gecesi"];
+const tags = [" Kahvaltı", " Dünya Mutfağı", " Kokteyller", " Nargile", " Maç Yayını", " Sıra Gecesi"];
 
 function useInView(threshold = 0.1) {
     const ref = useRef(null);

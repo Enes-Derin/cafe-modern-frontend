@@ -79,7 +79,6 @@ export default function App() {
                   { text: "Akşemsettin Mah. Şahane Sok.\nNo:1, Eyüp / İstanbul" },
                   { text: "0542 100 61 36", href: "tel:+905421006136" },
                   { text: "@keyif34_cafe", href: "https://instagram.com/keyif34_cafe" },
-                  { text: "⭐ 4.3 Google Puanı" },
                 ].map((item, i) => (
                   <div key={i}
                     onClick={() => item.href && window.open(item.href, "_blank")}
